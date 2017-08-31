@@ -1,0 +1,10 @@
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\bin\Debug\自动截屏并上传.exe
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\bin\Debug\自动截屏并上传.pdb
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.Form1.resources
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.Properties.Resources.resources
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.csproj.GenerateResource.Cache
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.exe
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.pdb
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\bin\Debug\Newtonsoft.Json.dll
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.Client.resources
+c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.csprojResolveAssemblyReference.cache
