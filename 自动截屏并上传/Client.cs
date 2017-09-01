@@ -98,5 +98,11 @@ namespace 自动截屏并上传
             }
 
         }
+
+        private void 给主发送粘贴板信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SendPaste sendPaste = new SendPaste();
+            sendPaste.Show();
+        }
     }
 }

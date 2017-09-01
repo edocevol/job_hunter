@@ -15,6 +15,7 @@ namespace 自动截屏并上传
         public static string SECRET_KEY = "SECRET_KEY";
         public static string BUCKET_NAME = "job_hunter";
         public static int TIME_OUT = 30000;
+        public static int COPY_FREQ = 10000;
         public static int CLIENT_NUM = 4;
         public static string JOB_NAME = "job_hunter";
         //加载万象优图的配置文件
@@ -61,6 +62,10 @@ namespace 自动截屏并上传
                         {
                             CLIENT_NUM = int.Parse(xn2.InnerText);
                         }
+                        else if (xn2.Name == "COPT_FREQ")
+                        {
+                            COPY_FREQ = int.Parse(xn2.InnerText);
+                        }
                     }
                 }
             }
@@ -72,6 +77,7 @@ namespace 自动截屏并上传
                 BUCKET_NAME = "job_hunter";
                 TIME_OUT = 30000;
                 CLIENT_NUM = 4;
+                COPY_FREQ = 10000;
             }
         }
 

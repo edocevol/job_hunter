@@ -30,10 +30,11 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.定时执行ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.启动客户端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭接收ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.启动客户端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.接收输入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.定时执行ToolStripMenuItem,
             this.关闭接收ToolStripMenuItem,
-            this.启动客户端ToolStripMenuItem});
+            this.启动客户端ToolStripMenuItem,
+            this.接收输入ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(466, 25);
@@ -56,6 +58,20 @@
             this.定时执行ToolStripMenuItem.Text = "开始处理";
             this.定时执行ToolStripMenuItem.Click += new System.EventHandler(this.定时执行ToolStripMenuItem_Click);
             // 
+            // 关闭接收ToolStripMenuItem
+            // 
+            this.关闭接收ToolStripMenuItem.Name = "关闭接收ToolStripMenuItem";
+            this.关闭接收ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.关闭接收ToolStripMenuItem.Text = "停止处理";
+            this.关闭接收ToolStripMenuItem.Click += new System.EventHandler(this.关闭接收ToolStripMenuItem_Click);
+            // 
+            // 启动客户端ToolStripMenuItem
+            // 
+            this.启动客户端ToolStripMenuItem.Name = "启动客户端ToolStripMenuItem";
+            this.启动客户端ToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.启动客户端ToolStripMenuItem.Text = "启动客户端";
+            this.启动客户端ToolStripMenuItem.Click += new System.EventHandler(this.启动客户端ToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -67,20 +83,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "00-00";
             // 
-            // 启动客户端ToolStripMenuItem
-            // 
-            this.启动客户端ToolStripMenuItem.Name = "启动客户端ToolStripMenuItem";
-            this.启动客户端ToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
-            this.启动客户端ToolStripMenuItem.Text = "启动客户端";
-            this.启动客户端ToolStripMenuItem.Click += new System.EventHandler(this.启动客户端ToolStripMenuItem_Click);
-            // 
-            // 关闭接收ToolStripMenuItem
-            // 
-            this.关闭接收ToolStripMenuItem.Name = "关闭接收ToolStripMenuItem";
-            this.关闭接收ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.关闭接收ToolStripMenuItem.Text = "停止处理";
-            this.关闭接收ToolStripMenuItem.Click += new System.EventHandler(this.关闭接收ToolStripMenuItem_Click);
-            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(0, 112);
@@ -88,6 +90,13 @@
             this.richTextBox1.Size = new System.Drawing.Size(466, 219);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
+            // 
+            // 接收输入ToolStripMenuItem
+            // 
+            this.接收输入ToolStripMenuItem.Name = "接收输入ToolStripMenuItem";
+            this.接收输入ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.接收输入ToolStripMenuItem.Text = "接收输入";
+            this.接收输入ToolStripMenuItem.Click += new System.EventHandler(this.接收输入ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -116,6 +125,7 @@
         private System.Windows.Forms.ToolStripMenuItem 启动客户端ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关闭接收ToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem 接收输入ToolStripMenuItem;
     }
 }
 

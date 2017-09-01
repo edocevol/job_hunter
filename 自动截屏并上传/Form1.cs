@@ -20,6 +20,7 @@ namespace 自动截屏并上传
 
         public string setID = "job_hunter";
         private System.Timers.Timer pTimer;
+        private System.Timers.Timer pTimer2;
         private static int num = 0;
         private static HashSet<string> keys = new HashSet<string>();
         [DllImport("gdi32.dll")]
@@ -73,7 +74,7 @@ namespace 自动截屏并上传
             //开始创建多少个队列
             for (int i = 0; i < AppSettings.CLIENT_NUM; i++)
             {
-                string key = AppSettings.MD5Encrypt64(AppSettings.JOB_NAME +DateTime.Now.ToFileTime());
+                string key = AppSettings.MD5Encrypt64(AppSettings.JOB_NAME + DateTime.Now.ToFileTime());
                 RedisCacheHelper.AddItemToList("client_all_key", key);
                 keys.Add(key);
                 richTextBox1.Text += key + "\r\n";
@@ -86,6 +87,20 @@ namespace 自动截屏并上传
             Control.CheckForIllegalCrossThreadCalls = false;//这个不太懂，有待研究
         }
 
+
+
+        private void pTimer_Elapsed_Paste(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            string code = RedisCacheHelper.PopItemFromSet("paste_" + AppSettings.JOB_NAME);
+            if (code != null && code != "")
+            {
+                if (this.InvokeRequired)
+                {
+                    updatePaste ur = new updatePaste(updatePaster);
+                    this.Invoke(ur, code);
+                }
+            }
+        }
         private void pTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             Rectangle rect = new Rectangle();
@@ -147,9 +162,23 @@ namespace 自动截屏并上传
             return;
         }
 
+        public delegate void updatePaste(string code);
+        public void updatePaster(string code)
+        {
+            Clipboard.SetDataObject(code);
+        }
+
         private void 清理日志ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ImageSG.ClearAll();
+        }
+
+        private void 接收输入ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pTimer2 = new System.Timers.Timer(AppSettings.COPY_FREQ);//每隔5秒执行一次，没用winfrom自带的
+            pTimer2.Elapsed += pTimer_Elapsed_Paste;//委托，要执行的方法
+            pTimer2.AutoReset = true;//获取该定时器自动执行
+            pTimer2.Enabled = true;//这个一定要写，要不然定时器不会执行的
         }
     }
 }
