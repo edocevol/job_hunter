@@ -180,5 +180,18 @@ namespace 自动截屏并上传
             pTimer2.AutoReset = true;//获取该定时器自动执行
             pTimer2.Enabled = true;//这个一定要写，要不然定时器不会执行的
         }
+
+        private void 清理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string res = Interaction.InputBox("提示信息", "输入清理日志管理权限", "admin", -1, -1);
+            if (res != null && res.Equals("admin10086"))
+            {
+                Thread thread = new Thread(ImageSG.ClearAll);
+                thread.Start();
+            }
+            else {
+                MessageBox.Show("it is none of your bussiness");
+            }
+        }
     }
 }

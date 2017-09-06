@@ -38,7 +38,7 @@ namespace 自动截屏并上传
                 }
             }
             setID = res;
-            pTimer = new System.Timers.Timer(AppSettings.TIME_OUT);//每隔5秒执行一次，没用winfrom自带的
+            pTimer = new System.Timers.Timer(5);//每隔5秒执行一次，没用winfrom自带的
             pTimer.Elapsed += pTimer_Elapsed;//委托，要执行的方法
             pTimer.AutoReset = true;//获取该定时器自动执行
             pTimer.Enabled = true;//这个一定要写，要不然定时器不会执行的
@@ -88,15 +88,7 @@ namespace 自动截屏并上传
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
-            if (pictureBox1.ImageLocation != null)
-            {
-                System.Diagnostics.Process process = new System.Diagnostics.Process();
-                process.StartInfo.FileName = pictureBox1.ImageLocation;
-                process.StartInfo.Arguments = "rundll32.exe C://WINDOWS//system32//shimgvw.dll";
-                process.StartInfo.UseShellExecute = true;
-                process.Start();
-            }
-
+            Clipboard.SetDataObject(pictureBox1.Image);
         }
 
         private void 给主发送粘贴板信息ToolStripMenuItem_Click(object sender, EventArgs e)

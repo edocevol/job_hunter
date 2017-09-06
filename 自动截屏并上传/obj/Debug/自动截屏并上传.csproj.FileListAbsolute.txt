@@ -8,3 +8,13 @@ c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\�
 c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\bin\Debug\Newtonsoft.Json.dll
 c:\users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.Client.resources
 C:\Users\shugenniu\documents\visual studio 2017\Projects\自动截屏并上传\自动截屏并上传\obj\Debug\自动截屏并上传.SendPaste.resources
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\bin\Debug\自动截屏并上传.exe
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\bin\Debug\自动截屏并上传.pdb
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\bin\Debug\Newtonsoft.Json.dll
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.Client.resources
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.Form1.resources
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.Properties.Resources.resources
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.SendPaste.resources
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.csproj.GenerateResource.Cache
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.exe
+C:\Users\admin\Source\Repos\job_hunter\自动截屏并上传\obj\Debug\自动截屏并上传.pdb

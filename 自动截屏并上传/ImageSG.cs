@@ -28,7 +28,7 @@ namespace 自动截屏并上传
 
                 var start = DateTime.Now.ToUniversalTime();
 
-                string remotePath = @"job_hunters/"+ Path.GetFileName(filepath);
+                string remotePath = @"job_hunters/" + Path.GetFileName(filepath);
                 //上传文件（不论文件是否分片，均使用本接口）
                 var uploadParasDic = new Dictionary<string, string>();
                 uploadParasDic.Add(CosParameters.PARA_BIZ_ATTR, "");
@@ -55,30 +55,40 @@ namespace 自动截屏并上传
             return res;
         }
 
-        public static void ClearAll() {
+        public static void ClearAll()
+        {
             try
             {
-                var foldListParasDic = new Dictionary<string, string>();
-                foldListParasDic.Add(CosParameters.PARA_NUM, "100");
-                var cos = new CosCloud(AppSettings.APP_ID, AppSettings.SECRET_ID, AppSettings.SECRET_KEY);
-                //result = cos.DeleteFolder();
-                var result = cos.GetFolderList(AppSettings.BUCKET_NAME, "job_hunters", foldListParasDic);
-                var obj = (JObject)JsonConvert.DeserializeObject(result);
-                var code = (int)obj["code"];
-                MessageBox.Show(obj.ToString());
-                if (code == 0)
+                bool tsop = false;
+                int total_count = 0;
+                while (!tsop)
                 {
-                    string data = obj["data"].ToString();//获取message属性(字段)的值  
-                    JObject infos = JObject.Parse(data);//把message转化为JObject对象  
-                    JArray ja = JArray.Parse(infos["infos"].ToString());//把规格转化为数组对象  
-                    int ja_length = ja.Count();//获取数组的长度  
-                    for (int i = 0; i < ja_length; i++)
+                    var foldListParasDic = new Dictionary<string, string>();
+                    foldListParasDic.Add(CosParameters.PARA_NUM, "1000");
+                    var cos = new CosCloud(AppSettings.APP_ID, AppSettings.SECRET_ID, AppSettings.SECRET_KEY);
+                    //result = cos.DeleteFolder();
+                    var result = cos.GetFolderList(AppSettings.BUCKET_NAME, "job_hunters", foldListParasDic);
+                    var obj = (JObject)JsonConvert.DeserializeObject(result);
+                    var code = (int)obj["code"];
+                    if (code == 0)
                     {
-                        string url = ja[i]["source_url"].ToString();
-                        cos.DeleteFile("AppSettings.BUCKET_NAME", "job_hunters/131485693835110000.png");
+                        string data = obj["data"].ToString();//获取message属性(字段)的值  
+                        JObject infos = JObject.Parse(data);//把message转化为JObject对象  
+                        JArray ja = JArray.Parse(infos["infos"].ToString());//把规格转化为数组对象  
+                        int ja_length = ja.Count();//获取数组的长度  
+                        for (int i = 0; i < ja_length; i++)
+                        {
+                            string url = ja[i]["source_url"].ToString();
+                            cos.DeleteFile(AppSettings.BUCKET_NAME, "job_hunters" + url.Substring(url.IndexOf("/" + 1)));
+                        }
+                        total_count += ja_length;
+                        if (ja_length == 0)
+                        {
+                            tsop = true;
+                        }
                     }
-                    MessageBox.Show("清理了" + ja_length + "个文件");
                 }
+                MessageBox.Show("清理了" + total_count + "个文件");
             }
             catch (Exception ex)
             {

@@ -32,9 +32,10 @@
             this.定时执行ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关闭接收ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.启动客户端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.接收输入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.接收输入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +45,8 @@
             this.定时执行ToolStripMenuItem,
             this.关闭接收ToolStripMenuItem,
             this.启动客户端ToolStripMenuItem,
-            this.接收输入ToolStripMenuItem});
+            this.接收输入ToolStripMenuItem,
+            this.清理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(466, 25);
@@ -72,6 +74,13 @@
             this.启动客户端ToolStripMenuItem.Text = "启动客户端";
             this.启动客户端ToolStripMenuItem.Click += new System.EventHandler(this.启动客户端ToolStripMenuItem_Click);
             // 
+            // 接收输入ToolStripMenuItem
+            // 
+            this.接收输入ToolStripMenuItem.Name = "接收输入ToolStripMenuItem";
+            this.接收输入ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.接收输入ToolStripMenuItem.Text = "接收输入";
+            this.接收输入ToolStripMenuItem.Click += new System.EventHandler(this.接收输入ToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -91,12 +100,12 @@
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
-            // 接收输入ToolStripMenuItem
+            // 清理ToolStripMenuItem
             // 
-            this.接收输入ToolStripMenuItem.Name = "接收输入ToolStripMenuItem";
-            this.接收输入ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.接收输入ToolStripMenuItem.Text = "接收输入";
-            this.接收输入ToolStripMenuItem.Click += new System.EventHandler(this.接收输入ToolStripMenuItem_Click);
+            this.清理ToolStripMenuItem.Name = "清理ToolStripMenuItem";
+            this.清理ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.清理ToolStripMenuItem.Text = "清理";
+            this.清理ToolStripMenuItem.Click += new System.EventHandler(this.清理ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -126,6 +135,7 @@
         private System.Windows.Forms.ToolStripMenuItem 关闭接收ToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripMenuItem 接收输入ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 清理ToolStripMenuItem;
     }
 }
 

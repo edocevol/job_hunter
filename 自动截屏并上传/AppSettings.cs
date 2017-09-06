@@ -56,15 +56,27 @@ namespace 自动截屏并上传
                         }
                         else if (xn2.Name == "TIME_OUT")
                         {
-                            TIME_OUT = int.Parse(xn2.InnerText);
+                            int tmp = int.Parse(xn2.InnerText);
+                            if (tmp > 2000)
+                            {
+                                TIME_OUT = tmp;
+                            }
                         }
                         else if (xn2.Name == "CLIENT_NUM")
                         {
-                            CLIENT_NUM = int.Parse(xn2.InnerText);
+                            int tmp = int.Parse(xn2.InnerText);
+                            if (tmp < 4 && tmp > 0)
+                            {
+                                CLIENT_NUM = tmp;
+                            }
                         }
                         else if (xn2.Name == "COPT_FREQ")
                         {
-                            COPY_FREQ = int.Parse(xn2.InnerText);
+                            int tmp = int.Parse(xn2.InnerText);
+                            if (tmp > 2000)
+                            {
+                                COPY_FREQ = tmp;
+                            }
                         }
                     }
                 }
@@ -84,7 +96,7 @@ namespace 自动截屏并上传
 
         public static string MD5Encrypt64(string password)
         {
-            return FormsAuthentication.HashPasswordForStoringInConfigFile(password, "MD5");
+            return "appid" + password.GetHashCode();
         }
     }
 }
