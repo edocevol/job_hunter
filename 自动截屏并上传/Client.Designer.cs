@@ -28,15 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.开始ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.停止ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.给主发送粘贴板信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.开始ToolStripMenuItem,
+            this.停止ToolStripMenuItem,
+            this.给主发送粘贴板信息ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1144, 29);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 开始ToolStripMenuItem
+            // 
+            this.开始ToolStripMenuItem.Name = "开始ToolStripMenuItem";
+            this.开始ToolStripMenuItem.Size = new System.Drawing.Size(150, 25);
+            this.开始ToolStripMenuItem.Text = "开始给小伙伴助攻";
+            this.开始ToolStripMenuItem.Click += new System.EventHandler(this.开始ToolStripMenuItem_Click);
+            // 
+            // 停止ToolStripMenuItem
+            // 
+            this.停止ToolStripMenuItem.Name = "停止ToolStripMenuItem";
+            this.停止ToolStripMenuItem.Size = new System.Drawing.Size(86, 25);
+            this.停止ToolStripMenuItem.Text = "停止助攻";
+            this.停止ToolStripMenuItem.Click += new System.EventHandler(this.停止ToolStripMenuItem_Click);
+            // 
+            // 给主发送粘贴板信息ToolStripMenuItem
+            // 
+            this.给主发送粘贴板信息ToolStripMenuItem.Name = "给主发送粘贴板信息ToolStripMenuItem";
+            this.给主发送粘贴板信息ToolStripMenuItem.Size = new System.Drawing.Size(150, 25);
+            this.给主发送粘贴板信息ToolStripMenuItem.Text = "给小伙伴发送答案";
+            this.给主发送粘贴板信息ToolStripMenuItem.Click += new System.EventHandler(this.给主发送粘贴板信息ToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(139, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1037, 564);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // listBox2
             // 
@@ -44,56 +91,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 12;
-            this.listBox2.Location = new System.Drawing.Point(-2, 24);
+            this.listBox2.Location = new System.Drawing.Point(20, 96);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(135, 640);
+            this.listBox2.Size = new System.Drawing.Size(113, 568);
             this.listBox2.TabIndex = 2;
             this.listBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseClick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.开始ToolStripMenuItem,
-            this.停止ToolStripMenuItem,
-            this.给主发送粘贴板信息ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1184, 25);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 开始ToolStripMenuItem
-            // 
-            this.开始ToolStripMenuItem.Name = "开始ToolStripMenuItem";
-            this.开始ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.开始ToolStripMenuItem.Text = "开始";
-            this.开始ToolStripMenuItem.Click += new System.EventHandler(this.开始ToolStripMenuItem_Click);
-            // 
-            // 停止ToolStripMenuItem
-            // 
-            this.停止ToolStripMenuItem.Name = "停止ToolStripMenuItem";
-            this.停止ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.停止ToolStripMenuItem.Text = "停止";
-            this.停止ToolStripMenuItem.Click += new System.EventHandler(this.停止ToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(140, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1032, 640);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // 给主发送粘贴板信息ToolStripMenuItem
-            // 
-            this.给主发送粘贴板信息ToolStripMenuItem.Name = "给主发送粘贴板信息ToolStripMenuItem";
-            this.给主发送粘贴板信息ToolStripMenuItem.Size = new System.Drawing.Size(128, 21);
-            this.给主发送粘贴板信息ToolStripMenuItem.Text = "给主发送粘贴板信息";
-            this.给主发送粘贴板信息ToolStripMenuItem.Click += new System.EventHandler(this.给主发送粘贴板信息ToolStripMenuItem_Click);
             // 
             // Client
             // 
@@ -103,9 +105,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Client";
-            this.Text = "Client";
+            this.Text = "助攻者";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -115,12 +118,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 开始ToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem 停止ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 给主发送粘贴板信息ToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

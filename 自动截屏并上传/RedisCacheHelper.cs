@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace 自动截屏并上传
 {
@@ -16,7 +17,7 @@ namespace 自动截屏并上传
 
         static RedisCacheHelper()
         {
-            var redisHostStr = "es.wanqing520.cn:6379";
+            var redisHostStr = AppSettings.REDIS_SERVER;
 
             if (!string.IsNullOrEmpty(redisHostStr))
             {
@@ -32,6 +33,9 @@ namespace 自动截屏并上传
                             AutoStart = true
                         });
                 }
+            }
+            else {
+                MessageBox.Show("Redis地址未配置");
             }
         }
         public static void Add<T>(string key, T value)
