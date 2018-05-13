@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -21,6 +22,10 @@ namespace 自动截屏并上传
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new 主界面());
+            }
+            else {
+
+                MessageBox.Show("同时只能有一个程序在运行");
             }
         }
     }

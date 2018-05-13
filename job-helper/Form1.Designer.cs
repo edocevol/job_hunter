@@ -133,6 +133,7 @@
             this.Name = "Form1";
             this.ShowInTaskbar = false;
             this.Text = "考试者数据采集端";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -24,7 +24,7 @@ namespace 自动截屏并上传
     {
         private Thread threadupdate;
 
-        private Form1 kaoshi;
+        public Form1 kaoshi;
         public 主界面()
         {
             InitializeComponent();
@@ -201,6 +201,7 @@ namespace 自动截屏并上传
             {
                 this.Show();
                 this.WindowState = FormWindowState.Normal;
+                this.Activate();
                 this.metroContextMenu1.Items[0].Text = "隐藏主界面";
             }
         }
@@ -232,14 +233,13 @@ namespace 自动截屏并上传
 
         private void 主界面_Leave(object sender, EventArgs e)
         {
-            this.Hide();
-            this.metroContextMenu1.Items[0].Text = "打开主界面";
+            //this.Hide();
+            //this.metroContextMenu1.Items[0].Text = "打开主界面";
         }
 
         private void 主界面_Deactivate(object sender, EventArgs e)
         {
-            this.Hide();
-            this.metroContextMenu1.Items[0].Text = "打开主界面";
+            //this.Hide();
         }
 
         private void 启动助考端ToolStripMenuItem_Click(object sender, EventArgs e)

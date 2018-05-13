@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="助考小助手.exe" size="764384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="助考小助手.exe" size="764896">
       <assemblyIdentity name="助考小助手" version="1.3.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YHqFE2Tanp8NC4E2Kx/mwkVmSrCDC1/cRDNnUOw8Z94=</dsig:DigestValue>
+        <dsig:DigestValue>rCYA01OrqMfadW2yytU12nOiyw+imuw5u8hjcVkCoxM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

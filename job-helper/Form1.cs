@@ -251,5 +251,13 @@ namespace 自动截屏并上传
         {
 
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.parentForm.Activate();
+            this.parentForm.Show();
+            this.parentForm.WindowState = FormWindowState.Normal;
+            this.parentForm.kaoshi = null;
+        }
     }
 }
