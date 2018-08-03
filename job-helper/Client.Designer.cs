@@ -33,10 +33,10 @@
             this.开始ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.停止ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.给主发送粘贴板信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.以系统通知发送提示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.文字识别ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.以系统通知发送提示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +78,13 @@
             this.给主发送粘贴板信息ToolStripMenuItem.Text = "给小伙伴发送答案";
             this.给主发送粘贴板信息ToolStripMenuItem.Click += new System.EventHandler(this.给主发送粘贴板信息ToolStripMenuItem_Click);
             // 
+            // 以系统通知发送提示ToolStripMenuItem
+            // 
+            this.以系统通知发送提示ToolStripMenuItem.Name = "以系统通知发送提示ToolStripMenuItem";
+            this.以系统通知发送提示ToolStripMenuItem.Size = new System.Drawing.Size(166, 25);
+            this.以系统通知发送提示ToolStripMenuItem.Text = "以系统通知发送提示";
+            this.以系统通知发送提示ToolStripMenuItem.Click += new System.EventHandler(this.以系统通知发送提示ToolStripMenuItem_Click);
+            // 
             // 文字识别ToolStripMenuItem
             // 
             this.文字识别ToolStripMenuItem.Name = "文字识别ToolStripMenuItem";
@@ -96,13 +103,6 @@
             this.listBox2.Size = new System.Drawing.Size(113, 568);
             this.listBox2.TabIndex = 2;
             this.listBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listBox2_MouseClick);
-            // 
-            // 以系统通知发送提示ToolStripMenuItem
-            // 
-            this.以系统通知发送提示ToolStripMenuItem.Name = "以系统通知发送提示ToolStripMenuItem";
-            this.以系统通知发送提示ToolStripMenuItem.Size = new System.Drawing.Size(166, 25);
-            this.以系统通知发送提示ToolStripMenuItem.Text = "以系统通知发送提示";
-            this.以系统通知发送提示ToolStripMenuItem.Click += new System.EventHandler(this.以系统通知发送提示ToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -128,6 +128,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Client";
             this.Text = "助攻者";
+            this.Load += new System.EventHandler(this.Client_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -17,6 +17,9 @@ namespace 自动截屏并上传
 
         static RedisCacheHelper()
         {
+            if (AppSettings.REDIS_SERVER == "") {
+                AppSettings.loadConfig();
+            }
             var redisHostStr = AppSettings.REDIS_SERVER;
 
             if (!string.IsNullOrEmpty(redisHostStr))

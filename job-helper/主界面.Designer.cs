@@ -34,8 +34,6 @@
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.metroRadioButton1 = new MetroFramework.Controls.MetroRadioButton();
             this.metroRadioButton2 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
@@ -44,15 +42,16 @@
             this.启动考试端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.启动助考端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.启动网页端ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查看本地图片ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroContextMenu1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroButton1
             // 
             this.metroButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton1.BackgroundImage")));
-            this.metroButton1.Location = new System.Drawing.Point(43, 118);
+            this.metroButton1.Location = new System.Drawing.Point(128, 118);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(205, 195);
             this.metroButton1.Style = MetroFramework.MetroColorStyle.Pink;
@@ -64,7 +63,7 @@
             // metroButton2
             // 
             this.metroButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton2.BackgroundImage")));
-            this.metroButton2.Location = new System.Drawing.Point(312, 118);
+            this.metroButton2.Location = new System.Drawing.Point(489, 118);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(205, 195);
             this.metroButton2.TabIndex = 1;
@@ -74,7 +73,7 @@
             // metroRadioButton1
             // 
             this.metroRadioButton1.AutoSize = true;
-            this.metroRadioButton1.Location = new System.Drawing.Point(364, 341);
+            this.metroRadioButton1.Location = new System.Drawing.Point(541, 341);
             this.metroRadioButton1.Name = "metroRadioButton1";
             this.metroRadioButton1.Size = new System.Drawing.Size(101, 15);
             this.metroRadioButton1.Style = MetroFramework.MetroColorStyle.Pink;
@@ -86,7 +85,7 @@
             // metroRadioButton2
             // 
             this.metroRadioButton2.AutoSize = true;
-            this.metroRadioButton2.Location = new System.Drawing.Point(95, 341);
+            this.metroRadioButton2.Location = new System.Drawing.Point(180, 341);
             this.metroRadioButton2.Name = "metroRadioButton2";
             this.metroRadioButton2.Size = new System.Drawing.Size(101, 15);
             this.metroRadioButton2.Style = MetroFramework.MetroColorStyle.Pink;
@@ -94,28 +93,6 @@
             this.metroRadioButton2.Text = "考试者客户端";
             this.metroRadioButton2.UseSelectable = true;
             this.metroRadioButton2.CheckedChanged += new System.EventHandler(this.metroRadioButton2_CheckedChanged);
-            // 
-            // metroRadioButton3
-            // 
-            this.metroRadioButton3.AutoSize = true;
-            this.metroRadioButton3.Location = new System.Drawing.Point(633, 341);
-            this.metroRadioButton3.Name = "metroRadioButton3";
-            this.metroRadioButton3.Size = new System.Drawing.Size(101, 15);
-            this.metroRadioButton3.Style = MetroFramework.MetroColorStyle.Pink;
-            this.metroRadioButton3.TabIndex = 2;
-            this.metroRadioButton3.Text = "助考者网页版";
-            this.metroRadioButton3.UseSelectable = true;
-            this.metroRadioButton3.CheckedChanged += new System.EventHandler(this.metroRadioButton3_CheckedChanged);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroButton3.BackgroundImage")));
-            this.metroButton3.Location = new System.Drawing.Point(581, 118);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(205, 195);
-            this.metroButton3.TabIndex = 1;
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // metroButton4
             // 
@@ -183,9 +160,16 @@
             // 
             this.启动网页端ToolStripMenuItem.Image = global::助考小助手.Properties.Resources.浏览器;
             this.启动网页端ToolStripMenuItem.Name = "启动网页端ToolStripMenuItem";
-            this.启动网页端ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.启动网页端ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.启动网页端ToolStripMenuItem.Text = "启动网页端";
             this.启动网页端ToolStripMenuItem.Click += new System.EventHandler(this.启动网页端ToolStripMenuItem_Click);
+            // 
+            // 查看本地图片ToolStripMenuItem
+            // 
+            this.查看本地图片ToolStripMenuItem.Name = "查看本地图片ToolStripMenuItem";
+            this.查看本地图片ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.查看本地图片ToolStripMenuItem.Text = "图片文件夹";
+            this.查看本地图片ToolStripMenuItem.Click += new System.EventHandler(this.查看本地图片ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
@@ -194,12 +178,15 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // 查看本地图片ToolStripMenuItem
+            // metroLink1
             // 
-            this.查看本地图片ToolStripMenuItem.Name = "查看本地图片ToolStripMenuItem";
-            this.查看本地图片ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.查看本地图片ToolStripMenuItem.Text = "图片文件夹";
-            this.查看本地图片ToolStripMenuItem.Click += new System.EventHandler(this.查看本地图片ToolStripMenuItem_Click);
+            this.metroLink1.ForeColor = System.Drawing.Color.Green;
+            this.metroLink1.Location = new System.Drawing.Point(1, 523);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.Size = new System.Drawing.Size(142, 23);
+            this.metroLink1.TabIndex = 6;
+            this.metroLink1.Text = "发布日期：20180622";
+            this.metroLink1.UseSelectable = true;
             // 
             // 主界面
             // 
@@ -207,12 +194,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 547);
             this.ContextMenuStrip = this.metroContextMenu1;
+            this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.metroButton4);
             this.Controls.Add(this.metroProgressBar1);
             this.Controls.Add(this.metroRadioButton2);
-            this.Controls.Add(this.metroRadioButton3);
             this.Controls.Add(this.metroRadioButton1);
-            this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -239,8 +225,6 @@
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton1;
         private MetroFramework.Controls.MetroRadioButton metroRadioButton2;
-        private MetroFramework.Controls.MetroRadioButton metroRadioButton3;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
         public System.Windows.Forms.NotifyIcon notifyIcon1;
@@ -251,5 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem 启动网页端ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查看本地图片ToolStripMenuItem;
+        private MetroFramework.Controls.MetroLink metroLink1;
     }
 }

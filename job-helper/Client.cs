@@ -85,6 +85,7 @@ namespace 自动截屏并上传
 
         private void pTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
+            AppSettings.loadConfig();
             string img = RedisCacheHelper.PopItemFromSet(setID);
             if (img != null)
             {
@@ -160,9 +161,15 @@ namespace 自动截屏并上传
             if (tips != "" && tips != null)
             {
                 tips = "KB4100" + tips;
+                AppSettings.loadConfig();
                 RedisCacheHelper.AddItemToSet("paste_" + setPhone, tips);
                 MetroMessageBox.Show(this, "答案以专属通道发送", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void Client_Load(object sender, EventArgs e)
+        {
+            AppSettings.loadConfig();
         }
     }
 }

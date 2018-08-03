@@ -140,7 +140,7 @@ namespace 自动截屏并上传
 
         private void 主界面_Load(object sender, EventArgs e)
         {
-            update();
+            //update();
         }
 
         private void 主界面_FormClosing(object sender, FormClosingEventArgs e)

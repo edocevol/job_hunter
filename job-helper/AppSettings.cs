@@ -18,7 +18,7 @@ namespace 自动截屏并上传
         public static int COPY_FREQ = 10000;
         public static int CLIENT_NUM = 4;
         public static string JOB_NAME = "job_hunter";
-        public static string REDIS_SERVER = "S833BCbj82wy8y23b@es.wanqing520.cn";
+        public static string REDIS_SERVER = "";
         public static string DES_KEY = "JOB-HELP";
         //加载万象优图的配置文件
         public static void loadConfig()
@@ -96,7 +96,7 @@ namespace 自动截屏并上传
                 TIME_OUT = 30000;
                 CLIENT_NUM = 4;
                 COPY_FREQ = 10000;
-                REDIS_SERVER = "S833BCbj82wy8y23b@es.wanqing520.cn";
+                REDIS_SERVER = "";
             }
         }
 

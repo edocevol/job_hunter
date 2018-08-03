@@ -9,7 +9,7 @@
 	<CLIENT_NUM comment="客户端数目">4</CLIENT_NUM>
 	<JOB_NAME comment="考试名称--最好修改">job_hunter</JOB_NAME>
 	<COPY_FREQ comment="粘贴板获取频率">5000</COPY_FREQ>
-	<REDIS_SERVER comment="redis服务器地址和密码">S833BCbj82wy8y23b@es.wanqing520.cn</REDIS_SERVER>
+	<REDIS_SERVER comment="redis服务器地址和密码">S833BCbj82wy8y23b@138.68.228.148</REDIS_SERVER>
   </tecent>
 </system>
 

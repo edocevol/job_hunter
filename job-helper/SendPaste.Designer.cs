@@ -73,6 +73,7 @@
             this.Name = "SendPaste";
             this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "发送答案";
+            this.Load += new System.EventHandler(this.SendPaste_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

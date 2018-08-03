@@ -29,5 +29,10 @@ namespace 自动截屏并上传
                 MetroMessageBox.Show(this, "答案以专属通道发送", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void SendPaste_Load(object sender, EventArgs e)
+        {
+            AppSettings.loadConfig();
+        }
     }
 }
